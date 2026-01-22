@@ -1,0 +1,13 @@
+p {
+  text-align: justify;
+}
+
+ul.-cmp-info {
+  & > li {
+    & > b:first-child {
+      &::after {
+        content: ':';
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+:host {
+  --prop-color: var(--cmp-color, var(--app-primary-color));
+  --prop-on-surface-color: var(--cmp-on-surface-color, var(--app-surface-container-color));
+}
+
+table {
+  border-collapse: collapse;
+
+  width: 100%;
+
+  :is(&, & > * > tr > *) {
+    border: 1px solid var(--prop-color);
+  }
+
+  & > caption {
+    font-weight: bold;
+  }
+
+  & > thead {
+    background-color: color(from var(--prop-on-surface-color) srgb r g b / 0.75);
+  }
+}
